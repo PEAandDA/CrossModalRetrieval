@@ -1,0 +1,26 @@
+# name of the dataset, support 'ms-coco', 'flickr30k'
+dataset: flickr30k
+
+# path of images
+images: E:\研究生\数据集\flickr30k\flickr30k-images\flickr30k-images
+
+# path of the json file which contains the captions, just support json file
+captions: E:\xDemo\cross_modal\demo\data\dataset_flickr30k.json
+
+# path to save the output processed data
+output: ./processed
+
+# number of captions for each image
+captions_num: 5
+
+# whether to shuffle the data
+shuffle: True
+
+# whether to override the existing prossessed data
+override: True
+
+# minimum word count of vocabulary
+min_word_count: 3
+
+# maximum length of caption
+max_len: 30
