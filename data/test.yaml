@@ -10,6 +10,9 @@ captions: E:\xDemo\cross_modal\demo\data\dataset_flickr30k.json
 # path to save the output processed data
 output: ./processed
 
+# the prefix of the output files, such as: prefix='flickr30k_' -> 'flickr30k_train.json', 'flickr30k_val.json', 'flickr30k_test.json'...
+prefix: 'flickr30k_'
+
 # number of captions for each image
 captions_num: 5
 
@@ -17,7 +20,7 @@ captions_num: 5
 shuffle: True
 
 # whether to override the existing prossessed data
-override: True
+override: False
 
 # minimum word count of vocabulary
 min_word_count: 3
