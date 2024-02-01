@@ -345,14 +345,15 @@ def create_dataloader(data, batch_size, workers=4):
                                 transform=val_transform)  # Transformation function
 
     # Training data loader
-    train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=workers, pin_memory=True)  # Batch size, shuffle data, number of worker threads, use memory pinning
+    train_loader = DataLoader(train_set, batch_size=batch_size, shuffle=True, num_workers=workers,
+                              pin_memory=True)  # Batch size, shuffle data, number of worker threads, use memory pinning
 
     # Validation data loader
-    val_loader = DataLoader(val_set, batch_size=batch_size, shuffle=False, num_workers=workers, pin_memory=True, drop_last=False)  # Batch size, do not shuffle data, number of worker threads, use memory pinning, do not drop the last incomplete batch
+    val_loader = DataLoader(val_set, batch_size=batch_size, shuffle=False, num_workers=workers, pin_memory=True,
+                            drop_last=False)  # Batch size, do not shuffle data, number of worker threads, use memory pinning, do not drop the last incomplete batch
 
     # Test data loader
-    test_loader = DataLoader(test_set, batch_size=batch_size, shuffle=False, num_workers=workers, pin_memory=True, drop_last=False)  # Batch size, do not shuffle data, number of worker threads, use memory pinning, do not drop the last incomplete batch
+    test_loader = DataLoader(test_set, batch_size=batch_size, shuffle=False, num_workers=workers, pin_memory=True,
+                             drop_last=False)  # Batch size, do not shuffle data, number of worker threads, use memory pinning, do not drop the last incomplete batch
 
     return train_loader, val_loader, test_loader  # Return training data loader, validation data loader, and test data loader
-
-
